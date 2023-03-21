@@ -73,13 +73,15 @@ body {
 .rate {
     display: flex;
     justify-content: space-between;
-    color: var(--Medium-Grey);
     margin-bottom: 16px;
 }
 
 .rate-buttons {
+    border: none;
     cursor: pointer;
+    transition: 0.3s;
     background-color: var(--Medium-blue);
+    color: var(--Medium-Grey);
     font-size: 1.2rem;
     display: flex;
     width: 30px;
@@ -89,8 +91,24 @@ body {
     align-items: center;
 }
 
-button {
+.rate-buttons:hover {
     background-color: var(--Orange);
+    color: var(--White);
+}
+
+.rate-buttons:focus {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+
+.selected {
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+#button {
+    background-color: var(--Orange);
+    cursor: pointer;
     color: var(--White);
     font-size: 1.2rem;
     letter-spacing: 2px;
@@ -98,4 +116,9 @@ button {
     border: none;
     padding: 10px 0;
     border-radius: 34px;
+}
+
+#button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
 }
